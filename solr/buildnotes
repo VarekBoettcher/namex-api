@@ -24,6 +24,12 @@ buildconfig "solr" created
 
 * If you need to run it against an existing object (not first time) use "| oc replace -f -" instead of "| oc create -f -"
 
+* And now tag the image
+
+(venv) NDM050057:openshift vboettch$ oc tag servicebc-ne-tools/solr:latest servicebc-ne-tools/solr:dev
+Tag solr:dev set to servicebc-ne-tools/solr@sha256:184122663e61dbc27003242d9493aedfd84219b3a079ce0181638717090c959b.
+
+
 * Deploy
 ** Make sure you're in the servicebc-ne-dev namespace
 (venv) NDM050057:openshift vboettch$ oc project servicebc-ne-dev
@@ -35,10 +41,7 @@ route "solr" created
 persistentvolumeclaim "solr" created
 deploymentconfig "solr" created
 
-* And tag
 
-(venv) NDM050057:openshift vboettch$ oc tag servicebc-ne-tools/solr:latest servicebc-ne-tools/solr:dev
-Tag solr:dev set to servicebc-ne-tools/solr@sha256:184122663e61dbc27003242d9493aedfd84219b3a079ce0181638717090c959b.
 
 
 
