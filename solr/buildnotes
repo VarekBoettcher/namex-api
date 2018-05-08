@@ -43,6 +43,12 @@ deploymentconfig "solr" created
 
 
 
+* BUILDNOTES for namex-solr
+As per the project documentation but build will only work for local OpenShift
+
+
+
+
 
 
 
