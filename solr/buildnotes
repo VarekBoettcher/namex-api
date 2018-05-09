@@ -19,6 +19,7 @@ If it outputs the JSON file then it's valid.  Not necessarily right, but it's va
 
 * upload the template with parameters (first time)
 (venv) NDM050057:openshift vboettch$ oc process -f templates/solr-build.json --param-file=solr-build.param | oc create -f -
+                                     oc process -f templates/solr-build.json --param-file=solr-build.param | oc replace -f -
 imagestream "solr" created
 buildconfig "solr" created
 
